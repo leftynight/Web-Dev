@@ -1,0 +1,97 @@
+@mixin vertical-align{
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+@mixin horizontal-align{
+    margin: 0 auto;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(241, 241, 241);
+}
+#intro{
+    width: 100%;
+    height: 20%;
+    margin-top: 20%;
+    text-align: center;
+    text-transform: uppercase;
+    color: lightgray;
+}
+#intro h1{
+    @include vertical-align;
+}
+#spinner{
+    @include horizontal-align;
+    margin: 0 auto;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    background-color: lightgray;
+    -webkit-perspective: 0;
+    -moz-perspective: 0;
+    perspective: 0;
+}
+#spinner-front{
+    z-index: 4;
+    width: 300px;
+    height: 50px;
+    background-color: red;
+    z
+    -webkit-transform: translate3d(0px,0px,50px);
+    -moz-transform: translate3d(0px, 0px,50px);
+    transform: translate3d(0px,0px, 50px);
+}
+#spinner-top{
+    background-color: chartreuse;
+    width: 300px;
+    height: 50px;
+    -webkit-transform: translate3d(0px,-75px,-50px)rotateX(90deg);
+    -moz-transform: translate3d(0px,-75px,-50px)rotateX(90deg);
+    transform: translate3d(0px,-75px, -50px)rotateX(90deg);
+}
+#spinner-back{
+    background-color: orange;
+    width: 300px;
+    height: 50px;
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    -webkit-transform: translateZ(50px);
+    -moz-transform: translateZ(50px);
+    transform: translateZ(50px);
+}
+#spinner-bottom{
+    background-color: green;
+    width: 300px;
+    height: 50px;
+    -webkit-transform: translateY(25px);
+    -moz-transform: translateY(25px);
+    transform: translateY(25px);
+}
+#arrow{
+    @include horizontal-align;
+    margin: 0 auto;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    border-radius: 3px;  
+}
+#arrow-top{
+    width: inherit;
+    height: 45px;
+    border-radius: 3px;
+    background-color: lightgray;
+}
+#arrow-bottom{
+    width: inherit;
+    height: 5px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: darkgray;
+}
